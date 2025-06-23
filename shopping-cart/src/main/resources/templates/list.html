@@ -1,0 +1,8 @@
+<h2>Danh sách sản phẩm</h2>
+<div th:each="p : ${products}">
+    <img th:src="@{'/images/' + ${p.image}}" width="100">
+    <h3 th:text="${p.name}">Tên</h3>
+    <p th:text="${p.price}">Giá</p>
+    <a th:href="@{'/products/' + ${p.id}}">Chi tiết</a>
+    <a th:href="@{'/products/add-to-cart/' + ${p.id}}">Thêm vào giỏ</a>
+</div>
