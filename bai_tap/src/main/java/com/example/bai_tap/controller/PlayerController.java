@@ -18,7 +18,7 @@ public class PlayerController {
 
     @GetMapping("")
     public ModelAndView showList() {
-        ModelAndView modelAndView = new ModelAndView("player/list"); // bỏ dấu "/"
+        ModelAndView modelAndView = new ModelAndView("player/list");
         modelAndView.addObject("playerList", playerService.findAll());
         return modelAndView;
     }
