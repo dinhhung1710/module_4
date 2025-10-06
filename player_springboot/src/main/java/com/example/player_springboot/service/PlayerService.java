@@ -1,7 +1,7 @@
-package com.example.player_thymeleaf.service;
+package com.example.player_springboot.service;
 
-import com.example.player_thymeleaf.entity.Player;
-import com.example.player_thymeleaf.repository.PlayerRepository;
+import com.example.player_springboot.entity.Player;
+import com.example.player_springboot.repository.IPlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,22 +10,21 @@ import java.util.List;
 @Service
 public class PlayerService implements IPlayerService{
     @Autowired
-    private PlayerRepository playerRepository;
+    private IPlayerRepository playerRepository;
 
     @Override
     public List<Player> findAll() {
-
         return playerRepository.findAll();
     }
 
     @Override
     public Player findById(int id) {
-        return playerRepository.findById(id);
+        return playerRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void add(Player player) {
-        playerRepository.add(player);
+    public boolean add(Player player) {
+        return playerRepository.save(player) != null;
     }
 
 }

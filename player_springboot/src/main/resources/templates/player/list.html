@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:insert="~{/layout/layout::library}"/>
+</head>
+<body>
+<div th:replace="~{/layout/layout::header}"></div>
+<a th:href="@{/players/add}">Thêm mới</a>
+<table class="table table-bordered">
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Họ và tên</th>
+        <th>Ngày sinh</th>
+        <th>Kinh nghiệm</th>
+        <th>Vị trí</th>
+        <th>Ảnh đại diện</th>
+        <th>Chi tiết</th>
+    </tr>
+    <tr th:each="player, status : ${playerList}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${player.id}"></td>
+        <td th:text="${player.fullName}"></td>
+        <td th:text="${player.dayOfBirth}"></td>
+        <td th:text="${player.experience}"></td>
+        <td th:text="${player.position}"></td>
+        <td>
+            <img src="${player.avatar}" alt="avatar" width="120" height="120" style="object-fit: cover;">
+        </td>
+        <td>
+            <a th:href="@{/students/detail/__${player.id}__}">Detail</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

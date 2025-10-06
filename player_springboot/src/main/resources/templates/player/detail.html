@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <th:block th:insert="~{/layout/layout::library}"/>
+</head>
+<body>
+<div th:replace="~{/layout/layout::header}"></div>
+<h1>Chi tiết</h1>
+    ID:
+    <input th:text="*{player.id}"><br>
+    Họ và tên:
+    <input th:text="*{player.fullName}">
+    Ngày sinh:
+    <input th:text="*{player.dayOfBirth}">
+    Kinh nghiệm:
+    <input th:text="*{player.experience}">
+    Vị trí:
+    <select th:text="*{player.position}">
+        <option value="">__Chọn vị trí__</option>
+        <option value="Thủ môn">Thủ môn</option>
+        <option value="Hậu vệ">Hậu vệ</option>
+        <option value="Tiền vệ">Tiền vệ</option>
+        <option value="Tiền đạo">Tiền đạo</option>
+    </select><br>
+    <input th:text="*{player.avatar}"><br>
+</body>
+</html>
