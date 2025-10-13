@@ -1,5 +1,6 @@
 package com.example.player_springboot.entity;
 
+import com.example.player_springboot.dto.PlayerDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -18,15 +19,8 @@ public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @NotBlank(message = "Không được để trống")
-    @Size(min = 5, max = 50, message = "Tên phải từ 5 đến 50 kí tự")
     private String name;
-
-    @NotBlank(message = "Không được để trống")
     private String country;
-
-    @NotBlank(message = "Không được để trống")
     private String coach;
 
     @OneToMany(mappedBy = "team")

@@ -1,4 +1,4 @@
-package com.example.player_springboot.entity;
+package com.example.player_springboot.dto;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,12 +8,11 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Player {
+public class PlayerDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,8 +21,5 @@ public class Player {
     private String experience;
     private String position;
     private String avatar;
-
-    @ManyToOne
-    @JoinColumn(name = "team_id")
-    private Team team;
+    private Integer teamId;
 }
