@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="81dafb37-541c-4369-9375-53d8e3e1fd39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/service/IPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/service/IPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/validate/PlayerValidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/player_springboot/src/main/java/com/example/player_springboot/validate/PlayerValidate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,8 @@
       <workItem from="1759923657656" duration="5550000" />
       <workItem from="1760096450458" duration="5070000" />
       <workItem from="1760355643536" duration="2512000" />
-      <workItem from="1760528952824" duration="299000" />
+      <workItem from="1760528952824" duration="3997000" />
+      <workItem from="1761300607320" duration="1769000" />
     </task>
     <servers />
   </component>

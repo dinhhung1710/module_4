@@ -45,7 +45,7 @@ public class PlayerValidate implements Validator {
             try {
                 LocalDate.parse(playerDTO.getDayOfBirth(), formatter);
             } catch (DateTimeParseException e) {
-                errors.rejectValue("dayOfBirth", null, "Định dạng ngày sinh phải là dd/MM/yy");
+                errors.rejectValue("dayOfBirth", null, "Định dạng ngày sinh là dd/MM/yy");
             }
         }
 
